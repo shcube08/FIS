@@ -1,3 +1,10 @@
+create table tblDPT(
+deptno numeric(4) primary key,
+dname varchar(40),
+loc varchar(40)
+)
+
+
 create table tblEMP(
 empno int primary key,
 ename varchar(40) not null,
@@ -8,11 +15,7 @@ salary numeric(7),
 comm numeric(6),
 deptno numeric(4) foreign key references tblDPT(deptno)
 )
-create table tblDPT(
-deptno numeric(4) primary key,
-dname varchar(40),
-loc varchar(40)
-)
+
 
 INSERT INTO tblEMP(EMPNO,ENAME,JOB,MGR_Id,HIREDATE,SALARY,COMM,DEPTNO) VALUES (7369,'SMITH','CLERK','7902','17-DEC-80',800,20,NULL);
 INSERT INTO tblEMP(EMPNO,ENAME,JOB,MGR_Id,HIREDATE,SALARY,COMM,DEPTNO) VALUES (7499,'ALLEN','SALESMAN','7698','20-FEB-81',1600,300,30);
